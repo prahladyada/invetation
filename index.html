@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Priya &amp; Rahul | Wedding Invitation</title>
+<meta name="description" content="Join Priya and Rahul as they celebrate their wedding on 25 December 2026 in New Delhi, India.">
+<meta name="theme-color" content="#5A1830">
+<meta name="color-scheme" content="light">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Priya &amp; Rahul Wedding">
+<meta property="og:description" content="You are invited to celebrate our special day ❤️">
+<meta property="og:image" content="assets/images/gallery-1.jpg">
+<meta property="og:url" content="https://priya-and-rahul.example.com/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png">
+<link rel="apple-touch-icon" href="assets/icons/icon-180.png">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+<noscript>
+<style>
+  .loading-screen{ display:none !important; }
+  .cover-screen{ position:static !important; height:auto !important; min-height:100vh; }
+  #petalContainer, .mouse-glow, .custom-cursor, .cursor-ring{ display:none !important; }
+  html, body{ overflow:auto !important; }
+  .reveal{ opacity:1 !important; transform:none !important; }
+</style>
+</noscript>
+</head>
+<body>
+
+<!-- ============ LOADING SCREEN ============ -->
+<div id="loadingScreen" class="loading-screen" aria-hidden="true">
+  <div class="loading-ring-wrap">
+    <svg class="loading-ring" viewBox="0 0 120 120">
+      <circle class="loading-ring-track" cx="60" cy="60" r="52"></circle>
+      <circle class="loading-ring-progress" cx="60" cy="60" r="52"></circle>
+    </svg>
+    <span class="loading-monogram">P&nbsp;&amp;&nbsp;R</span>
+  </div>
+  <p class="loading-text">Loading our story&hellip;</p>
+</div>
+
+<!-- ============ FLOATING PETALS ============ -->
+<div id="petalContainer" class="petal-container" aria-hidden="true"></div>
+
+<!-- ============ CUSTOM CURSOR (desktop only) ============ -->
+<div id="customCursor" class="custom-cursor" aria-hidden="true"></div>
+<div id="cursorRing" class="cursor-ring" aria-hidden="true"></div>
+<div id="mouseGlow" class="mouse-glow" aria-hidden="true"></div>
+
+<!-- ============ COVER / OPENING SCREEN ============ -->
+<div id="coverScreen" class="cover-screen">
+  <div class="cover-particles" id="coverParticles" aria-hidden="true"></div>
+
+  <svg class="cover-flower cover-flower--tr" viewBox="0 0 220 220" aria-hidden="true">
+    <path d="M10 210 C 40 160 40 120 70 90 C 90 70 120 65 140 40 C 150 28 150 14 150 6" class="flower-stem"/>
+    <path d="M70 90 C 55 78 48 60 58 46 C 66 35 84 35 90 48 C 96 60 88 76 70 90 Z" class="flower-leaf"/>
+    <path d="M110 62 C 98 52 94 34 106 22 C 116 12 134 14 138 28 C 142 42 130 56 110 62 Z" class="flower-leaf"/>
+    <circle cx="150" cy="6" r="6" class="flower-bud"/>
+  </svg>
+  <svg class="cover-flower cover-flower--bl" viewBox="0 0 220 220" aria-hidden="true">
+    <path d="M210 10 C 160 40 120 40 90 70 C 70 90 65 120 40 140 C 28 150 14 150 6 150" class="flower-stem"/>
+    <path d="M90 70 C 78 55 60 48 46 58 C 35 66 35 84 48 90 C 60 96 76 88 90 70 Z" class="flower-leaf"/>
+    <path d="M62 110 C 52 98 34 94 22 106 C 12 116 14 134 28 138 C 42 142 56 130 62 110 Z" class="flower-leaf"/>
+    <circle cx="6" cy="150" r="6" class="flower-bud"/>
+  </svg>
+
+  <div class="corner-motif corner-motif--tl draw-group"><svg viewBox="0 0 120 120"><path class="draw-path" d="M112 26 L46 26 Q26 26 26 46 L26 112"/><path class="draw-path draw-path--curl" d="M26 26 C 12 26 3 37 5 50 C 7 61 20 66 29 57 C 34 52 32 43 25 41 C 21 39.5 18 43 20 46"/></svg></div>
+  <div class="corner-motif corner-motif--tr draw-group"><svg viewBox="0 0 120 120"><path class="draw-path" d="M8 26 L74 26 Q94 26 94 46 L94 112"/><path class="draw-path draw-path--curl" d="M94 26 C 108 26 117 37 115 50 C 113 61 100 66 91 57 C 86 52 88 43 95 41 C 99 39.5 102 43 100 46"/></svg></div>
+  <div class="corner-motif corner-motif--bl draw-group"><svg viewBox="0 0 120 120"><path class="draw-path" d="M112 94 L46 94 Q26 94 26 74 L26 8"/><path class="draw-path draw-path--curl" d="M26 94 C 12 94 3 83 5 70 C 7 59 20 54 29 63 C 34 68 32 77 25 79 C 21 80.5 18 77 20 74"/></svg></div>
+  <div class="corner-motif corner-motif--br draw-group"><svg viewBox="0 0 120 120"><path class="draw-path" d="M8 94 L74 94 Q94 94 94 74 L94 8"/><path class="draw-path draw-path--curl" d="M94 94 C 108 94 117 83 115 70 C 113 59 100 54 91 63 C 86 68 88 77 95 79 C 99 80.5 102 77 100 74"/></svg></div>
+
+  <div class="cover-content">
+    <p class="cover-eyebrow">Together with their families</p>
+
+    <div class="cover-names">
+      <h1 class="cover-name cover-name--bride">Priya</h1>
+      <span class="cover-ampersand" aria-hidden="true">&amp;</span>
+      <h1 class="cover-name cover-name--groom">Rahul</h1>
+    </div>
+
+    <p class="cover-tagline">are getting married</p>
+
+    <div class="cover-divider" aria-hidden="true"><span></span></div>
+
+    <p class="cover-date">25 December 2026</p>
+    <p class="cover-location">
+      <svg class="icon-pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+      New Delhi, India
+    </p>
+
+    <a href="#home" id="openInvitationBtn" class="btn btn--open">
+      <span>Open Invitation</span>
+    </a>
+  </div>
+</div>
+
+<!-- ============ MAIN NAVIGATION ============ -->
+<nav class="main-nav" id="mainNav" aria-label="Primary">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">P&nbsp;&amp;&nbsp;R</a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#home" class="nav-link" data-section="home">Home</a></li>
+      <li><a href="#couple" class="nav-link" data-section="couple">Couple</a></li>
+      <li><a href="#story" class="nav-link" data-section="story">Story</a></li>
+      <li><a href="#events" class="nav-link" data-section="events">Events</a></li>
+      <li><a href="#gallery" class="nav-link" data-section="gallery">Gallery</a></li>
+      <li><a href="#rsvp" class="nav-link" data-section="rsvp">RSVP</a></li>
+      <li><a href="#venue" class="nav-link" data-section="venue">Location</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ============ MAIN INVITATION ============ -->
+<div id="mainInvitation" class="main-invitation">
+<main>
+
+  <!-- HOME / HERO ECHO -->
+  <section id="home" class="section hero-section">
+    <div class="hero-bg parallax" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <span class="section-motif reveal fade-scale" aria-hidden="true">
+        <svg viewBox="0 0 32 32"><path d="M16 4 C 24 4 28 11 26 18 C 24 25 16 28 10 24 C 6 21.5 6 16 10 14 C 12.5 12.5 15 14 14 16.5" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="16" cy="4" r="1.6" fill="currentColor"/></svg>
+      </span>
+      <h2 class="hero-heading reveal fade-up">Priya <span class="hero-amp">&amp;</span> Rahul</h2>
+      <p class="hero-sub reveal fade-up" data-delay="1">25<span class="dot">•</span>12<span class="dot">•</span>2026 &mdash; New Delhi, India</p>
+      <p class="hero-welcome reveal fade-up" data-delay="2">Together with our families, we joyfully invite you to be part of the beginning of our forever. Scroll down to explore our story, the celebrations, and everything you need to join us.</p>
+      <div class="scroll-cue reveal fade-up" data-delay="3" aria-hidden="true">
+        <span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- COUPLE -->
+  <section id="couple" class="section couple-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-motif reveal fade-scale" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M16 4 C 24 4 28 11 26 18 C 24 25 16 28 10 24 C 6 21.5 6 16 10 14 C 12.5 12.5 15 14 14 16.5" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="16" cy="4" r="1.6" fill="currentColor"/></svg>
+        </span>
+        <h2 class="section-title reveal fade-up">The Couple</h2>
+      </div>
+
+      <div class="couple-grid">
+        <article class="couple-card reveal fade-left">
+          <div class="couple-photo-frame">
+            <img src="assets/images/bride.jpg" alt="Portrait of Priya Sharma, the bride" loading="lazy" width="900" height="1100">
+          </div>
+          <h3 class="couple-name">Priya Sharma</h3>
+          <p class="couple-desc">Daughter of Mr. &amp; Mrs. Sharma</p>
+        </article>
+
+        <div class="couple-heart reveal fade-scale" aria-hidden="true">
+          <span class="heart-glow"></span>
+          <span class="heart-symbol">&#9825;</span>
+          <span class="floating-heart fh-1">&#10084;</span>
+          <span class="floating-heart fh-2">&#10084;</span>
+          <span class="floating-heart fh-3">&#10084;</span>
+        </div>
+
+        <article class="couple-card reveal fade-right">
+          <div class="couple-photo-frame">
+            <img src="assets/images/groom.jpg" alt="Portrait of Rahul Singh, the groom" loading="lazy" width="900" height="1100">
+          </div>
+          <h3 class="couple-name">Rahul Singh</h3>
+          <p class="couple-desc">Son of Mr. &amp; Mrs. Singh</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section id="countdown" class="section countdown-section" aria-label="Countdown to the wedding">
+    <div class="hero-bg parallax" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-head">
+        <span class="section-motif section-motif--light reveal fade-scale" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M16 4 C 24 4 28 11 26 18 C 24 25 16 28 10 24 C 6 21.5 6 16 10 14 C 12.5 12.5 15 14 14 16.5" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="16" cy="4" r="1.6" fill="currentColor"/></svg>
+        </span>
+        <h2 class="section-title section-title--light reveal fade-up">Counting Every Moment</h2>
+      </div>
+
+      <div class="countdown-grid" id="countdownGrid">
+        <div class="countdown-item reveal fade-up" data-delay="0">
+          <span class="countdown-value" id="cdDays">00</span>
+          <span class="countdown-label">Days</span>
+        </div>
+        <div class="countdown-item reveal fade-up" data-delay="1">
+          <span class="countdown-value" id="cdHours">00</span>
+          <span class="countdown-label">Hours</span>
+        </div>
+        <div class="countdown-item reveal fade-up" data-delay="2">
+          <span class="countdown-value" id="cdMinutes">00</span>
+          <span class="countdown-label">Minutes</span>
+        </div>
+        <div class="countdown-item reveal fade-up" data-delay="3">
+          <span class="countdown-value" id="cdSeconds">00</span>
+          <span class="countdown-label">Seconds</span>
+        </div>
+      </div>
+      <p class="countdown-complete" id="countdownComplete" hidden>The Wait Is Over <span aria-hidden="true">&#10084;&#65039;</span></p>
+
+      <div class="hero-cta reveal fade-up">
+        <button id="addToCalendarBtn" class="btn btn--outline btn--on-dark" type="button">Add to Calendar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section id="story" class="section story-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-motif reveal fade-scale" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M16 4 C 24 4 28 11 26 18 C 24 25 16 28 10 24 C 6 21.5 6 16 10 14 C 12.5 12.5 15 14 14 16.5" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="16" cy="4" r="1.6" fill="currentColor"/></svg>
+        </span>
+        <h2 class="section-title reveal fade-up">Our Story</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal fade-left">
+          <span class="timeline-marker" aria-hidden="true"></span>
+          <div class="timeline-content">
+            <span class="timeline-year">2019</span>
+            <h3 class="timeline-title">The First Meeting</h3>
+            <p class="timeline-text">Two paths crossed and a beautiful story began.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal fade-right">
+          <span class="timeline-marker" aria-hidden="true"></span>
+          <div class="timeline-content">
+            <span class="timeline-year">2021</span>
+            <h3 class="timeline-title">The First Date</h3>
+            <p class="timeline-text">A simple meeting became a memory we would never forget.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal fade-left">
+          <span class="timeline-marker" aria-hidden="true"></span>
+          <div class="timeline-content">
+            <span class="timeline-year">2024</span>
+            <h3 class="timeline-title">The Proposal</h3>
+            <p class="timeline-text">One question changed everything.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal fade-right">
+          <span class="timeline-marker" aria-hidden="true"></span>
+          <div class="timeline-content">
+            <span class="timeline-year">2026</span>
+            <h3 class="timeline-title">The Wedding</h3>
+            <p class="timeline-text">Two families become one.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEDDING EVENTS -->
+  <section id="events" class="section events-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-motif reveal fade-scale" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M16 4 C 24 4 28 11 26 18 C 24 25 16 28 10 24 C 6 21.5 6 16 10 14 C 12.5 12.5 15 14 14 16.5" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="16" cy="4" r="1.6" fill="currentColor"/></svg>
+        </span>
+        <h2 class="section-title reveal fade-up">Wedding Celebrations</h2>
+      </div>
+
+      <div class="events-grid">
+        <article class="event-card reveal fade-up" data-delay="0">
+          <span class="event-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M20 8c-3 5-7 8-7 14a7 7 0 0 0 14 0c0-6-4-9-7-14z" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M20 16c-1.5 2.5-3 4-3 6.5a3 3 0 0 0 6 0c0-2.5-1.5-4-3-6.5z" fill="currentColor" opacity=".25"/></svg></span>
+          <h3 class="event-name">Mehndi</h3>
+          <p class="event-date">23 December 2026</p>
+          <p class="event-time">6:00 PM</p>
+          <p class="event-venue">Sharma Residence</p>
+          <button class="btn btn--outline event-map-btn" type="button" data-map-url="https://www.google.com/maps/search/?api=1&amp;query=Sharma+Residence+New+Delhi+India">View Location</button>
+        </article>
+
+        <article class="event-card reveal fade-up" data-delay="1">
+          <span class="event-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><circle cx="15" cy="26" r="5" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="29" cy="22" r="5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M20 26V10l10-3v14" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></span>
+          <h3 class="event-name">Sangeet</h3>
+          <p class="event-date">24 December 2026</p>
+          <p class="event-time">7:00 PM</p>
+          <p class="event-venue">The Grand Palace</p>
+          <button class="btn btn--outline event-map-btn" type="button" data-map-url="https://www.google.com/maps/search/?api=1&amp;query=The+Grand+Palace+New+Delhi+India">View Location</button>
+        </article>
+
+        <article class="event-card reveal fade-up" data-delay="2">
+          <span class="event-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><circle cx="16" cy="20" r="9" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="24" cy="20" r="9" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></span>
+          <h3 class="event-name">Wedding Ceremony</h3>
+          <p class="event-date">25 December 2026</p>
+          <p class="event-time">6:00 PM</p>
+          <p class="event-venue">The Grand Palace</p>
+          <button class="btn btn--outline event-map-btn" type="button" data-map-url="https://www.google.com/maps/search/?api=1&amp;query=The+Grand+Palace+New+Delhi+India">View Location</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- VENUE -->
+  <section id="venue" class="section venue-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-motif reveal fade-scale" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M16 4 C 24 4 28 11 26 18 C 24 25 16 28 10 24 C 6 21.5 6 16 10 14 C 12.5 12.5 15 14 14 16.5" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="16" cy="4" r="1.6" fill="currentColor"/></svg>
+        </span>
+        <h2 class="section-title reveal fade-up">The Wedding Venue</h2>
+      </div>
+
+      <div class="venue-card reveal fade-scale">
+        <h3 class="venue-name">The Grand Palace</h3>
+        <p class="venue-city">New Delhi, India</p>
+        <div class="venue-actions">
+          <a id="getDirectionsBtn" class="btn btn--gold" href="https://www.google.com/maps/search/?api=1&amp;query=The+Grand+Palace+New+Delhi+India" target="_blank" rel="noopener">Get Directions</a>
+          <button id="addToCalendarBtn2" class="btn btn--outline" type="button" data-calendar-trigger>Add to Calendar</button>
+        </div>
+        <div class="venue-map-wrap">
+          <iframe class="venue-map" src="https://www.google.com/maps?q=The+Grand+Palace+New+Delhi+India&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map to The Grand Palace, New Delhi"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section gallery-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-motif reveal fade-scale" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M16 4 C 24 4 28 11 26 18 C 24 25 16 28 10 24 C 6 21.5 6 16 10 14 C 12.5 12.5 15 14 14 16.5" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="16" cy="4" r="1.6" fill="currentColor"/></svg>
+        </span>
+        <h2 class="section-title reveal fade-up">Gallery</h2>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <button type="button" class="gallery-item reveal fade-scale" data-index="0" aria-label="Open photo 1 of 8"><img src="assets/images/gallery-1.jpg" alt="Wedding gallery photo 1" width="900" height="1100" loading="lazy"><span class="gallery-overlay"><span class="gallery-heart" aria-hidden="true">&#9825;</span></span></button>
+        <button type="button" class="gallery-item reveal fade-scale" data-index="1" aria-label="Open photo 2 of 8"><img src="assets/images/gallery-2.jpg" alt="Wedding gallery photo 2" width="900" height="900" loading="lazy"><span class="gallery-overlay"><span class="gallery-heart" aria-hidden="true">&#9825;</span></span></button>
+        <button type="button" class="gallery-item reveal fade-scale" data-index="2" aria-label="Open photo 3 of 8"><img src="assets/images/gallery-3.jpg" alt="Wedding gallery photo 3" width="900" height="1200" loading="lazy"><span class="gallery-overlay"><span class="gallery-heart" aria-hidden="true">&#9825;</span></span></button>
+        <button type="button" class="gallery-item reveal fade-scale" data-index="3" aria-label="Open photo 4 of 8"><img src="assets/images/gallery-4.jpg" alt="Wedding gallery photo 4" width="1100" height="900" loading="lazy"><span class="gallery-overlay"><span class="gallery-heart" aria-hidden="true">&#9825;</span></span></button>
+        <button type="button" class="gallery-item reveal fade-scale" data-index="4" aria-label="Open photo 5 of 8"><img src="assets/images/gallery-5.jpg" alt="Wedding gallery photo 5" width="900" height="900" loading="lazy"><span class="gallery-overlay"><span class="gallery-heart" aria-hidden="true">&#9825;</span></span></button>
+        <button type="button" class="gallery-item reveal fade-scale" data-index="5" aria-label="Open photo 6 of 8"><img src="assets/images/gallery-6.jpg" alt="Wedding gallery photo 6" width="900" height="1150" loading="lazy"><span class="gallery-overlay"><span class="gallery-heart" aria-hidden="true">&#9825;</span></span></button>
+        <button type="button" class="gallery-item reveal fade-scale" data-index="6" aria-label="Open photo 7 of 8"><img src="assets/images/gallery-7.jpg" alt="Wedding gallery photo 7" width="1100" height="900" loading="lazy"><span class="gallery-overlay"><span class="gallery-heart" aria-hidden="true">&#9825;</span></span></button>
+        <button type="button" class="gallery-item reveal fade-scale" data-index="7" aria-label="Open photo 8 of 8"><img src="assets/images/gallery-8.jpg" alt="Wedding gallery photo 8" width="900" height="1050" loading="lazy"><span class="gallery-overlay"><span class="gallery-heart" aria-hidden="true">&#9825;</span></span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section id="rsvp" class="section rsvp-section">
+    <div class="container container--narrow">
+      <div class="section-head">
+        <span class="section-motif reveal fade-scale" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M16 4 C 24 4 28 11 26 18 C 24 25 16 28 10 24 C 6 21.5 6 16 10 14 C 12.5 12.5 15 14 14 16.5" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="16" cy="4" r="1.6" fill="currentColor"/></svg>
+        </span>
+        <h2 class="section-title reveal fade-up">We Can&rsquo;t Wait To Celebrate With You</h2>
+      </div>
+
+      <form id="rsvpForm" class="rsvp-form reveal fade-up" novalidate>
+        <div class="form-row">
+          <label for="rsvpName">Full Name</label>
+          <input type="text" id="rsvpName" name="name" autocomplete="name" required>
+        </div>
+        <div class="form-row">
+          <label for="rsvpEmail">Email</label>
+          <input type="email" id="rsvpEmail" name="email" autocomplete="email" required>
+        </div>
+        <div class="form-row">
+          <label for="rsvpPhone">Phone</label>
+          <input type="tel" id="rsvpPhone" name="phone" autocomplete="tel">
+        </div>
+        <div class="form-row form-row--split">
+          <div>
+            <label for="rsvpGuests">Number of Guests</label>
+            <input type="number" id="rsvpGuests" name="guests" min="1" max="10" value="1">
+          </div>
+          <div>
+            <label for="rsvpMeal">Meal Preference</label>
+            <select id="rsvpMeal" name="meal">
+              <option value="vegetarian">Vegetarian</option>
+              <option value="non-vegetarian">Non-Vegetarian</option>
+              <option value="vegan">Vegan</option>
+              <option value="no-preference">No Preference</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="rsvpMessage">Message</label>
+          <textarea id="rsvpMessage" name="message" rows="3"></textarea>
+        </div>
+        <p class="form-error" id="rsvpError" role="alert" hidden></p>
+        <div class="rsvp-actions">
+          <button type="submit" class="btn btn--gold" data-attending="yes">Yes, I&rsquo;ll Be There <span aria-hidden="true">&#10084;&#65039;</span></button>
+          <button type="submit" class="btn btn--outline" data-attending="no">Sorry, Can&rsquo;t Make It</button>
+        </div>
+      </form>
+
+      <div class="rsvp-success" id="rsvpSuccess" hidden>
+        <span class="success-heart" aria-hidden="true">&#10084;</span>
+        <h3>Thank You <span aria-hidden="true">&#10084;&#65039;</span></h3>
+        <p>We can&rsquo;t wait to celebrate this beautiful day with you.</p>
+      </div>
+
+      <div class="rsvp-whatsapp reveal fade-up">
+        <span class="rsvp-whatsapp-label">Prefer WhatsApp?</span>
+        <a id="whatsappRsvpBtn" class="btn btn--whatsapp" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1s-.7.8-.9 1c-.2.2-.3.2-.6.1s-1.2-.4-2.2-1.4c-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.6-1.5-.8-2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.3s1 2.7 1.1 2.9c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+          <span>RSVP via WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCAN & SHARE -->
+  <section id="scan-share" class="section share-section">
+    <div class="container container--narrow">
+      <div class="section-head">
+        <span class="section-motif reveal fade-scale" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M16 4 C 24 4 28 11 26 18 C 24 25 16 28 10 24 C 6 21.5 6 16 10 14 C 12.5 12.5 15 14 14 16.5" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="16" cy="4" r="1.6" fill="currentColor"/></svg>
+        </span>
+        <h2 class="section-title reveal fade-up">Scan &amp; Share</h2>
+      </div>
+      <div class="qr-card reveal fade-scale">
+        <div class="qr-code-wrap" id="qrCodeWrap" aria-label="QR code linking to this invitation"></div>
+        <p class="qr-caption">Scan to open our wedding invitation</p>
+        <button id="downloadQrBtn" class="btn btn--outline" type="button">Download QR</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <span class="footer-heart" aria-hidden="true">&#10084;</span>
+  <h2 class="footer-names">Priya &amp; Rahul</h2>
+  <p class="footer-date">25 &bull; 12 &bull; 2026</p>
+  <p class="footer-love">With love,<br>Priya &amp; Rahul <span aria-hidden="true">&#10084;&#65039;</span></p>
+  <p class="footer-credit">Made with love for our special day.</p>
+</footer>
+
+</div><!-- /#mainInvitation -->
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+  <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+  <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close photo viewer">&times;</button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" type="button" aria-label="Previous photo">&#8249;</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="">
+  <button class="lightbox-nav lightbox-next" id="lightboxNext" type="button" aria-label="Next photo">&#8250;</button>
+  <p class="lightbox-counter" id="lightboxCounter" aria-live="polite"></p>
+</div>
+
+<!-- ============ FLOATING ACTION BUTTONS ============ -->
+<div class="fab-stack">
+  <button id="musicToggle" class="fab fab--music" type="button" aria-label="Play wedding music" aria-pressed="false">
+    <span class="fab-icon fab-icon--music">&#9835;</span>
+  </button>
+  <button id="shareBtn" class="fab fab--share" type="button" aria-label="Share this invitation">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16.1c-.8 0-1.5.3-2 .8l-6.1-3.6c.1-.3.1-.6.1-.9s0-.6-.1-.9L15.9 8c.5.5 1.3.8 2.1.8 1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3c0 .3 0 .6.1.9L9 9.8c-.5-.5-1.3-.8-2-.8-1.7 0-3 1.3-3 3s1.3 3 3 3c.8 0 1.5-.3 2-.8l6.1 3.6c-.1.3-.1.5-.1.8 0 1.7 1.3 3 3 3s3-1.3 3-3-1.3-3-3-3z"/></svg>
+  </button>
+</div>
+
+<audio id="weddingMusic" loop preload="none">
+  <source src="assets/music/wedding.mp3" type="audio/mpeg">
+</audio>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- Lightweight, dependency-free QR generator (MIT) — used only by js/share.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/animations.js" defer></script>
+<script src="js/countdown.js" defer></script>
+<script src="js/gallery.js" defer></script>
+<script src="js/rsvp.js" defer></script>
+<script src="js/share.js" defer></script>
+</body>
+</html>

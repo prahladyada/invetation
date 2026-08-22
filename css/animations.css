@@ -1,0 +1,106 @@
+/* ==========================================================================
+   Priya & Rahul — Wedding Invitation
+   animations.css — keyframes + scroll reveal system
+   ========================================================================== */
+
+/* ---------- Scroll reveal system ---------- */
+.reveal{
+  opacity:0;
+  transition: opacity .9s var(--ease-premium), transform .9s var(--ease-premium);
+  transition-delay: var(--reveal-delay, 0s);
+}
+.reveal.fade-up{ transform: translateY(48px); }
+.reveal.fade-left{ transform: translateX(-64px); }
+.reveal.fade-right{ transform: translateX(64px); }
+.reveal.fade-scale{ transform: scale(.9); }
+
+.reveal.active{
+  opacity:1;
+  transform: translate(0,0) scale(1);
+}
+
+/* Timeline alternation on desktop is handled in responsive.css;
+   fade direction here still applies for the initial mobile stack. */
+
+/* ---------- Keyframes ---------- */
+@keyframes ringDraw{
+  from{ stroke-dashoffset: 327; }
+  to{ stroke-dashoffset: 0; }
+}
+
+@keyframes particleTwinkle{
+  0%, 100%{ opacity:0; transform: translateY(0) scale(.6); }
+  50%{ opacity: var(--po, .8); transform: translateY(-14px) scale(1); }
+}
+
+@keyframes scrollCue{
+  0%{ opacity:0; transform: translateY(0); }
+  30%{ opacity:1; }
+  70%{ opacity:1; }
+  100%{ opacity:0; transform: translateY(14px); }
+}
+
+@keyframes pulseGlow{
+  0%, 100%{ opacity:.55; transform: scale(1); }
+  50%{ opacity:1; transform: scale(1.12); }
+}
+
+@keyframes floatHeart{
+  0%, 100%{ transform: translateY(0) rotate(0deg); opacity:.5; }
+  50%{ transform: translateY(-16px) rotate(8deg); opacity:1; }
+}
+
+@keyframes countPulse{
+  0%{ transform: scale(1); }
+  40%{ transform: scale(1.14); color: var(--gold); }
+  100%{ transform: scale(1); }
+}
+
+@keyframes heartPop{
+  0%{ transform: scale(0); opacity:0; }
+  55%{ transform: scale(1.25); opacity:1; }
+  100%{ transform: scale(1); }
+}
+
+@keyframes spinSlow{
+  from{ transform: rotate(0deg); }
+  to{ transform: rotate(360deg); }
+}
+
+@keyframes fabPulse{
+  0%{ box-shadow: 0 0 0 0 rgba(var(--gold-rgb),.45); }
+  70%{ box-shadow: 0 0 0 14px rgba(var(--gold-rgb),0); }
+  100%{ box-shadow: 0 0 0 0 rgba(var(--gold-rgb),0); }
+}
+
+@keyframes petalFall{
+  0%{
+    transform: translate3d(0,0,0) rotate(0deg);
+    opacity: var(--po, .75);
+  }
+  100%{
+    transform: translate3d(var(--px, 40px), 110vh, 0) rotate(340deg);
+    opacity:0;
+  }
+}
+
+@keyframes toastIn{
+  from{ opacity:0; transform: translate(-50%, 16px); }
+  to{ opacity:1; transform: translate(-50%, 0); }
+}
+
+/* ---------- Respect reduced motion ---------- */
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+
+  *, *::before, *::after{
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior:auto !important;
+  }
+
+  .reveal{ opacity:1; transform:none; }
+  .loading-ring-progress{ stroke-dashoffset:0; }
+  .petal-container, .cover-particles, .mouse-glow, .custom-cursor, .cursor-ring{ display:none !important; }
+}
