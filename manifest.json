@@ -1,7 +1,7 @@
 {
-  "name": "Priya & Rahul Wedding",
-  "short_name": "P&R Wedding",
-  "description": "You are invited to celebrate the wedding of Priya & Rahul on 25 December 2026 in New Delhi, India.",
+  "name": "Manisha & Mahesh Wedding",
+  "short_name": "M&M Wedding",
+  "description": "You are invited to celebrate the wedding of Manisha & Mahesh on 22 November 2026 in Narayan Farm House.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

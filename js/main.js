@@ -11,24 +11,24 @@
       for a different wedding. Every other script reads from here.
    -------------------------------------------------------------------- */
 window.weddingConfig = {
-  brideFirstName: "Priya",
-  groomFirstName: "Rahul",
-  brideFullName: "Priya Sharma",
-  groomFullName: "Rahul Singh",
+  brideFirstName: "Manisha",
+  groomFirstName: "Mahesh",
+  brideFullName: "Manisha",
+  groomFullName: "Mahesh",
 
   // ISO 8601 with an explicit offset so the countdown is accurate for
   // every guest regardless of their own timezone.
-  weddingDate: "2026-12-25T18:00:00+05:30",
-  weddingDateDisplay: "25 December 2026",
+  weddingDate: "2026-09-22T18:00:00+05:30",
+  weddingDateDisplay: "22 November 2026",
 
-  venueName: "The Grand Palace",
-  city: "New Delhi, India",
+  venueName: "Narayan Farm House",
+  city: "Taj Highway, Behrampur Village, Vijay Nagar, Ghaziabad, UP 201009",
 
-  whatsappNumber: "919999999999", // country code + number, digits only
+  whatsappNumber: "918595669337", // country code + number, digits only
 
-  googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=The+Grand+Palace+New+Delhi+India",
+  googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=narayan+farm+house+in+taj+highway+India",
 
-  invitationTitle: "Priya & Rahul Wedding",
+  invitationTitle: "Manisha & Mahesh Wedding",
   invitationMessage: "You are invited to celebrate our special day \u2764\uFE0F"
 };
 
