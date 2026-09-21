@@ -18,7 +18,7 @@ window.weddingConfig = {
 
   // ISO 8601 with an explicit offset so the countdown is accurate for
   // every guest regardless of their own timezone.
-  weddingDate: "2026-09-22T18:00:00+05:30",
+  weddingDate: "2026-11-22T18:00:00+05:30",
   weddingDateDisplay: "22 November 2026",
 
   venueName: "Narayan Farm House",
